@@ -14,16 +14,26 @@ window.onload = function() {
 
   const dom = [".com", ".es", ".net"];
 
+  const domainDiv = document.getElementById("domain");
+
   for (let indexPronoun = 0; indexPronoun < pronoun.length; indexPronoun++) {
     for (let indexAdj = 0; indexAdj < adj.length; indexAdj++) {
       for (let indexNoun = 0; indexNoun < noun.length; indexNoun++) {
         for (let indexDom = 0; indexDom < dom.length; indexDom++) {
-          console.log(
+          domainDiv.innerHTML +=
+            "<p>" +
             pronoun[indexPronoun] +
-              adj[indexAdj] +
-              noun[indexNoun] +
-              dom[indexDom]
-          );
+            adj[indexAdj] +
+            noun[indexNoun] +
+            dom[indexDom] +
+            "</p>";
+
+          // console.log(
+          //   pronoun[indexPronoun] +
+          //     adj[indexAdj] +
+          //     noun[indexNoun] +
+          //     dom[indexDom]
+          // );
         }
       }
     }
